@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class PegawaiLoginController extends Controller
 {
@@ -24,6 +25,7 @@ class PegawaiLoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/pegawai/home';
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
@@ -36,6 +38,7 @@ class PegawaiLoginController extends Controller
     {
         return auth()->guard('pegawai');
     }
+
     public function showLoginForm()
     {
         return view('auth.pegawai-login');

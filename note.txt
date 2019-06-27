@@ -1,0 +1,15 @@
+Search directory Illuminate\Foundation\Auth\AuthenticatesUsers;
+
+Change
+
+public function username()
+{
+    return 'email';
+}
+
+to
+
+public function username()
+{
+    return 'nip';
+}
